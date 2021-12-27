@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  db:
+    container_name: intensive-food-mongodb
+    image: mongo:5.0.4
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/mongo
